@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+
+
+:root{
+    --mcolor: #2f7efd;
+    --white: #ffffff;
+    --black: #222222;
+    --txtcolor: #9A9A9A;
+    --border: #DFDFDF;
+}
+
+body{
+    background-image: url(https://thumbs.dreamstime.com/b/writer-s-table-flat-lay-composition-student-desk-w-supplies-blank-notebook-pages-coffee-cup-clipboard-pencil-planner-to-do-list-109355198.jpg);
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    background-color: var(--mcolor);
+    padding: 20px;
+    box-shadow: 0px 0px 30px -5px #0000007a;
+}
+
+
+.mobile_body{
+    backdrop-filter: blur(10px);
+    width: 370px;
+    min-width: 320px;
+    overflow: hidden;
+}
+
+
+.menu-items_wrapper{
+    padding: 20px 35px;
+}
+
+
+.social_menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social_menu li{
+    margin-right: 25px;
+}
+
+.social_menu i {
+    border-radius: 5px;
+}
+
+
+.social_menu i.fa-facebook-f {
+    background-color: #3b5a9a;
+    padding: 15px 18px;
+}
+
+.social_menu i.fa-twitter {
+    background-color: #1aa9e1;
+    padding: 15px;
+}
+
+.social_menu i.fa-instagram {
+    background-color: #7c4a3a;
+    padding: 15px 16.5px;
+}
+
+
+.menu-items_wrapper ul{
+    list-style: none;
+}
+
+
+.menu-items_wrapper ul li{
+    padding: 8% 0px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.menu-items_wrapper ul li a{
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.menu_items{
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    transition: 0.5s;
+    background-color: var(--mcolor);
+    z-index: 1;
+    height: 100%;
+    width: 290px;
+    box-shadow: 0px 0px 20px 5px #0000007a;
+}
+
+
+.menu_items{
+    overflow-y: scroll;
+}
+
+
+.menu_items::-webkit-scrollbar{
+    width: 0px;
+}
+
+.menu_items::scrollbar{
+    width: 0px;
+}
+
+
+.top_menu{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: var(--white);
+}
+
+
+.top_menu div p{
+    font-weight: 550;
+}
+
+
+i.cross{
+    font-size: 25px;
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    right: 120%;
+    top: 20px;
+    color: #ffffff;
+}
+
+i.cross_left{
+    right: 40px;
+}
+
+
+i{
+    cursor: pointer;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    left: -120%;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+
+main{
+    height: calc(100vh - 63px);
+    overflow-y: scroll;
+    padding-bottom: 80px;
+    border: 2px solid blue;
+}
+
+main::-webkit-scrollbar{
+    width: 0;
+}
+
+.content_part{
+    padding: 20px 15px;
+}
+
+
+main .list_card_wrapper{
+    padding-bottom: 10px;
+    height: 98%;
+    border: 1px solid var(--border);
+    background-color: var(--white);
+}
+
+.list_card_wrapper h4{
+    background-color: #F7F7F7;
+    padding: 10px;
+}
+
+#ul{
+    list-style: none;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.list_wrapper{
+    padding: 10px;
+}
+
+
+.li{
+    height: 45px;
+    border: 1px solid var(--border);
+    padding: 14px 10px;
+    margin: 10px 0px;
+}
+
+input.check {
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+    float: left;
+}
+
+i.fa-trash{
+    float: right;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+
+h5.nam_taker {
+    position: relative;
+    font-size: 16px;
+    display: inline-block;
+}
+
+h5.nam_taker:before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    top: 50%;
+    height: 1px;
+    background-color: var(--black);
+    display: none;
+}
+
+input.check:checked + h5.nam_taker:before{
+    display: inline-block;
+}
+
+input.check:checked ~ i.fa-trash{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.add_li_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add_inp{
+    border: 1px solid var(--border);
+    outline: none;
+    padding: 9px;
+    border-radius: 3px;
+    font-size: 15px;
+    width: 75%;
+}
+
+.add_btn{
+    height: 35px;
+    background-color: var(--mcolor);
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 15px;
+    border-radius: 3px;
+    width: 70px;
+
+}
+
+footer{
+    background-color: var(--white);
+    padding: 12px 20px;
+    position: fixed;
+    bottom: 0vh;
+    width: 100%;
+    box-shadow: 0px 0px 30px -15px var(--txtcolor);
+}
+
+
+.option a{
+    text-decoration: none;
+    color: var(--txtcolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.option a:hover{
+    color: var(--mcolor);
+}
+
+.bottom_menu_wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.bottom_menu_wrapper>div:hover{
+    color: var(--mcolor);
+}
+
+
+.bottom_menu_wrapper .active a{
+    color: var(--mcolor);
+}
+
+.top_text p {
+    font-size: 20px;
+}
+
+.lefting{
+    left: 0px;
+}

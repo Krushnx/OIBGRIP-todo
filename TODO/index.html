@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <div class="mobile_body">
+        <header>
+            <div id="top_menu" class="top_menu">
+                <div class="menu_icon">
+                    <i id="bars" class="fas fa-bars"></i>
+                </div>
+
+                <div class="top_text">
+                    <p>To Do List</p>
+                </div>
+
+                <div class="edit_top_menu">
+                    <i class="far fa-edit"></i>
+                </div>
+
+
+        </header>
+
+
+        <main>
+            <i id="cross" class="fas fa-times cross"></i>
+            <div id="overlay" class="overlay"></div>
+            <div id="menu_bar_div" class="menu_items">
+                <div class="menu-items_wrapper">                 
+                    <ul class="social_menu">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+
+                    
+                </div>
+
+        </div>
+
+            <div class="content_part">
+
+                <div class="list_card_wrapper">
+
+                    <h4>All Items</h4>
+
+
+                    <div class="list_wrapper">
+
+                        <div class="add_li_btn">
+                            <input type="text" placeholder="write something" class="add_inp">
+                            <button class="add_btn">Add</button>
+                        </div>
+
+                        <ul id="ul">
+                            <li class= "li">
+                                <input type="checkbox" class="check" checked>
+                                <h5 class="nam_taker">element</h5>
+                    
+                            <i class="fas fa-trash close"></i>
+                        </li>
+
+                        <li class= "li">
+                                <input type="checkbox" class="check">
+                                <h5 class="nam_taker">elemt</h5>               
+                                <i class="fas fa-trash close"></i>
+                        </li>
+                        
+                        <li class= "li">
+                                <input type="checkbox" class="check" checked>
+                                <h5 class="nam_taker">Text</h5>
+                                <i class="fas fa-trash close"></i>
+                        </li>
+                        <li class= "li">
+                                <input type="checkbox" class="check">
+                                <h5 class="nam_taker">Demo</h5>
+                                <i class="fas fa-trash close"></i>
+                        </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+
+
+        
+   </div>
+        
+        <script src="index.js"></script>
+</body>
+</html>
+
